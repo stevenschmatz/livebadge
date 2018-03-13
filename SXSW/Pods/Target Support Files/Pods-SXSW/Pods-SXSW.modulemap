@@ -1,0 +1,6 @@
+framework module Pods_SXSW {
+  umbrella header "Pods-SXSW-umbrella.h"
+
+  export *
+  module * { export * }
+}
