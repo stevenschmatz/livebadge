@@ -9,6 +9,7 @@
 import UIKit
 import SceneKit
 import ARKit
+import PopupDialog
 
 class ViewController: UIViewController, ARSCNViewDelegate {
 
@@ -25,9 +26,51 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
         // Create a new scene
         let scene = SCNScene(named: "art.scnassets/ship.scn")!
-        
+
         // Set the scene to the view
         sceneView.scene = scene
+
+        // Setup interaction
+        initInteraction()
+    }
+
+    func initInteraction() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(handleTap(rec:)))
+        sceneView.addGestureRecognizer(tap);
+    }
+
+    @objc func handleTap(rec: UITapGestureRecognizer) {
+        if rec.state == .ended {
+            let location: CGPoint = rec.location(in: sceneView)
+            let hits = self.sceneView.hitTest(location)
+            if !hits.isEmpty {
+                // let tappedNode = hits.first?.node
+                showItemDialog()
+            }
+        }
+    }
+
+    func showItemDialog() {
+        // Prepare the popup assets
+        let title = "THIS IS THE DIALOG TITLE"
+        let message = "This is the message section of the popup dialog default view"
+        let image = UIImage(named: "pexels-photo-103290")
+
+        // Create the dialog
+        let popup = PopupDialog(title: title, message: message, image: image)
+
+        // Create buttons
+        let buttonOne = DefaultButton(title: "OKAY") {
+            print("Dismissed.")
+        }
+
+        // Add buttons to dialog
+        // Alternatively, you can use popup.addButton(buttonOne)
+        // to add a single button
+        popup.addButtons([buttonOne])
+
+        // Present dialog
+        self.present(popup, animated: true, completion: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
