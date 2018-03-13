@@ -112,8 +112,9 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             // Create a plane to visualize the initial position of the detected image.
             let plane = SCNPlane(width: referenceImage.physicalSize.width,
                                  height: referenceImage.physicalSize.height)
+
             let planeNode = SCNNode(geometry: plane)
-            planeNode.opacity = 0.9
+            planeNode.opacity = 0.1
             
             /*
              `SCNPlane` is vertically oriented in its local coordinate space, but
@@ -135,6 +136,8 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             let scene = SCNScene(named: "art.scnassets/ship.scn")!
             
             if let shipNode = scene.rootNode.childNode(withName: "ship", recursively: true) {
+                shipNode.position = SCNVector3(0, 0, 0)
+                shipNode.scale = SCNVector3(1.0, 1.0, 1.0)
                 node.addChildNode(shipNode)
             }
         }
