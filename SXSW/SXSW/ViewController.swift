@@ -23,12 +23,6 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
         // Show statistics such as fps and timing information
         sceneView.showsStatistics = true
-        
-        // Create a new scene
-        let scene = SCNScene(named: "art.scnassets/ship.scn")!
-
-        // Set the scene to the view
-        sceneView.scene = scene
 
         // Setup interaction
         initInteraction()
@@ -111,7 +105,6 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         let referenceImage = imageAnchor.referenceImage
         
         DispatchQueue.main.async {
-            
             // Create a plane to visualize the initial position of the detected image.
             let plane = SCNPlane(width: referenceImage.physicalSize.width,
                                  height: referenceImage.physicalSize.height)
@@ -133,6 +126,13 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             
             // Add the plane visualization to the scene.
             node.addChildNode(planeNode)
+            
+            // Create a new scene
+            let scene = SCNScene(named: "art.scnassets/ship.scn")!
+            
+            if let shipNode = scene.rootNode.childNode(withName: "ship", recursively: true) {
+                node.addChildNode(shipNode)
+            }
         }
     }
     
