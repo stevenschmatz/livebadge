@@ -133,6 +133,7 @@
                         <viewLayoutGuide key="safeArea" id="1He-HF-4xw"/>
                     </view>
                     <connections>
+                        <outlet property="eventPreviewView" destination="92R-OX-eoD" id="BE3-Yp-69O"/>
                         <outlet property="sceneView" destination="Lyi-Fk-kyp" id="8cX-bZ-DNt"/>
                     </connections>
                 </viewController>

@@ -14,7 +14,8 @@ import PopupDialog
 class ViewController: UIViewController, ARSCNViewDelegate {
 
     @IBOutlet var sceneView: ARSCNView!
-    
+    @IBOutlet weak var eventPreviewView: UIView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -23,6 +24,9 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
         // Show statistics such as fps and timing information
         sceneView.showsStatistics = true
+
+        eventPreviewView.layer.cornerRadius = 5;
+        eventPreviewView.layer.masksToBounds = true;
 
         // Setup interaction
         initInteraction()
