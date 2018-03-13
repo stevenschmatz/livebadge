@@ -25,9 +25,28 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
         // Create a new scene
         let scene = SCNScene(named: "art.scnassets/ship.scn")!
-        
+
         // Set the scene to the view
         sceneView.scene = scene
+
+        // Setup interaction
+        initInteraction()
+    }
+
+    func initInteraction() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(handleTap(rec:)))
+        sceneView.addGestureRecognizer(tap);
+    }
+
+    @objc func handleTap(rec: UITapGestureRecognizer) {
+        if rec.state == .ended {
+            let location: CGPoint = rec.location(in: sceneView)
+            let hits = self.sceneView.hitTest(location)
+            if !hits.isEmpty {
+                // let tappedNode = hits.first?.node
+                print("Node was tapped!")
+            }
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
