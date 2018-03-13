@@ -6,5 +6,5 @@ target 'SXSW' do
   use_frameworks!
 
   # Pods for SXSW
-
+  pod 'PopupDialog', '~> 0.7'
 end
