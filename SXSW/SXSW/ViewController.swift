@@ -41,7 +41,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         if rec.state == .ended {
             let location: CGPoint = rec.location(in: sceneView)
             let hits = self.sceneView.hitTest(location)
-            if !hits.isEmpty {
+            if !hits.isEmpty && hits[0].node.name != "plane" {
                 // let tappedNode = hits.first?.node
                 showItemDialog()
             }
@@ -114,6 +114,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
                                  height: referenceImage.physicalSize.height)
 
             let planeNode = SCNNode(geometry: plane)
+            planeNode.name = "plane"
             planeNode.opacity = 0.1
             
             /*
