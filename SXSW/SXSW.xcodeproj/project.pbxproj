@@ -14,6 +14,7 @@
 		174BB58E20586D9E001FB020 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 174BB58D20586D9E001FB020 /* Assets.xcassets */; };
 		174BB59120586D9E001FB020 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 174BB58F20586D9E001FB020 /* LaunchScreen.storyboard */; };
 		174BB59920586EFD001FB020 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 174BB59820586EFD001FB020 /* .gitignore */; };
+		174BB59B20587015001FB020 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 174BB59A20587015001FB020 /* Podfile */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		174BB59020586D9E001FB020 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		174BB59220586D9E001FB020 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		174BB59820586EFD001FB020 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		174BB59A20587015001FB020 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +44,7 @@
 		174BB57820586D9D001FB020 = {
 			isa = PBXGroup;
 			children = (
+				174BB59A20587015001FB020 /* Podfile */,
 				174BB59820586EFD001FB020 /* .gitignore */,
 				174BB58320586D9D001FB020 /* SXSW */,
 				174BB58220586D9D001FB020 /* Products */,
@@ -128,6 +131,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				174BB59B20587015001FB020 /* Podfile in Resources */,
 				174BB59920586EFD001FB020 /* .gitignore in Resources */,
 				174BB58720586D9D001FB020 /* art.scnassets in Resources */,
 				174BB59120586D9E001FB020 /* LaunchScreen.storyboard in Resources */,
