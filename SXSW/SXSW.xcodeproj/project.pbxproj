@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		172764E920588F9C00A889E0 /* ItemTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172764E820588F9C00A889E0 /* ItemTableViewController.swift */; };
 		174BB58520586D9D001FB020 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174BB58420586D9D001FB020 /* AppDelegate.swift */; };
 		174BB58720586D9D001FB020 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 174BB58620586D9D001FB020 /* art.scnassets */; };
 		174BB58920586D9D001FB020 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174BB58820586D9D001FB020 /* ViewController.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		172764E820588F9C00A889E0 /* ItemTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewController.swift; sourceTree = "<group>"; };
 		174BB58120586D9D001FB020 /* SXSW.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SXSW.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		174BB58420586D9D001FB020 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		174BB58620586D9D001FB020 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 				174BB58620586D9D001FB020 /* art.scnassets */,
 				174BB58820586D9D001FB020 /* ViewController.swift */,
 				174BB58A20586D9D001FB020 /* Main.storyboard */,
+				172764E820588F9C00A889E0 /* ItemTableViewController.swift */,
 				174BB58D20586D9E001FB020 /* Assets.xcassets */,
 				174BB58F20586D9E001FB020 /* LaunchScreen.storyboard */,
 				174BB59220586D9E001FB020 /* Info.plist */,
@@ -235,6 +238,7 @@
 			files = (
 				174BB58920586D9D001FB020 /* ViewController.swift in Sources */,
 				174BB58520586D9D001FB020 /* AppDelegate.swift in Sources */,
+				172764E920588F9C00A889E0 /* ItemTableViewController.swift in Sources */,
 				17B3C8C4205884B6002F6DFB /* EventViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
