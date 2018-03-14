@@ -1,5 +1,15 @@
 PODS:
+  - Bolts (1.9.0):
+    - Bolts/AppLinks (= 1.9.0)
+    - Bolts/Tasks (= 1.9.0)
+  - Bolts/AppLinks (1.9.0):
+    - Bolts/Tasks
+  - Bolts/Tasks (1.9.0)
   - DynamicBlurView (2.0.2)
+  - FBSDKCoreKit (4.31.1):
+    - Bolts (~> 1.7)
+  - FBSDKLoginKit (4.31.1):
+    - FBSDKCoreKit
   - Firebase/Auth (4.10.1):
     - Firebase/Core
     - FirebaseAuth (= 4.4.4)
@@ -26,6 +36,11 @@ PODS:
     - leveldb-library (~> 1.18)
   - FirebaseInstanceID (2.0.9):
     - FirebaseCore (~> 4.0)
+  - FirebaseUI/Auth (4.5.3):
+    - Firebase/Auth (~> 4.2)
+  - FirebaseUI/Facebook (4.5.3):
+    - FBSDKLoginKit (~> 4.0)
+    - FirebaseUI/Auth
   - GoogleToolboxForMac/DebugUtils (2.1.3):
     - GoogleToolboxForMac/Defines (= 2.1.3)
   - GoogleToolboxForMac/Defines (2.1.3)
@@ -47,25 +62,32 @@ PODS:
     - DynamicBlurView (~> 2.0)
 
 DEPENDENCIES:
+  - FBSDKLoginKit
   - Firebase/Auth
+  - Firebase/Database
+  - FirebaseUI/Facebook
   - Firebase/Core
   - Firebase/Database
   - PopupDialog (~> 0.7)
 
 SPEC CHECKSUMS:
+  Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
   DynamicBlurView: aa6db4defc6e537eb86fc5e58dd3991666178399
+  FBSDKCoreKit: e08ccfcefa7bc1347a07c276dac9bf6c7fe57024
+  FBSDKLoginKit: 99797ac39252fef6f72600b886f6ee60b4b29cab
   Firebase: 92c6ba593e32db0defde464a9adc981d5cb49f97
   FirebaseAnalytics: 3dfae28d4a5e06f86c4fae830efc2ad3fadb19bc
   FirebaseAuth: d040bb7a9db6dfc29d0e7ec82d48be51352b2581
   FirebaseCore: 872307b001bbefda1dfa0dbfffa50a6919023d4a
   FirebaseDatabase: 5f0bc6134c5c237cf55f9e1249d406770a75eafd
   FirebaseInstanceID: d2058a35e9bebda1b6dd42486b84917bde552a9d
+  FirebaseUI: 7edccd19081e3ee57cd031abaa0a98d3b2ad8e58
   GoogleToolboxForMac: 2501e2ad72a52eb3dfe7bd9aee7dad11b858bd20
   GTMSessionFetcher: 390ea358e5a0d0133153806f744662dad933d06b
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   PopupDialog: 39598b7d41719f5c025b4b70e62728bae7734fef
 
-PODFILE CHECKSUM: f9fa44ea874cc72af89ff96e6154b3b26b6291ac
+PODFILE CHECKSUM: 5ef3e35827084af12fe4cd9b46ce658016fe4795
 
 COCOAPODS: 1.4.0

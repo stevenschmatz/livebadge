@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/schmatz/projects/sxsw-hackathon/SXSW/SXSW/Fonts/IntroViewController.swift">
+   </FileRef>
+   <FileRef
       location = "group:SXSW.xcodeproj">
    </FileRef>
    <FileRef

@@ -11,4 +11,6 @@ target 'SXSW' do
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
+  pod 'FirebaseUI/Facebook'
+  pod 'FBSDKLoginKit'
 end
