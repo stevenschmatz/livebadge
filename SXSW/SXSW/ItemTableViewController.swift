@@ -10,6 +10,8 @@ import UIKit
 import Firebase
 import FirebaseDatabase
 
+let colors = [Colors.Blue, Colors.Orange, Colors.Pink]
+
 class ItemTableViewController : UITableViewController {
 
     var ref: DatabaseReference!
@@ -27,10 +29,12 @@ class ItemTableViewController : UITableViewController {
     }
 
     func getData() {
-        ref.child("events/").observe(.childAdded, with: { (snapshot) -> Void in
-            let item = Item(description: snapshot.description, rarity: "")
+        ref.child("users").child("vMTuRtY4OYN3h3cpAArm9fEAj8y1").child("event").child("4").observe(.childAdded, with: { (snapshot) -> Void in
+            let value = snapshot.value as? NSDictionary? ?? [:]
+            let description = value?["description"] as? String ?? ""
+            let item = Item(description: description, rarity: "")
             self.items.append(item)
-            self.tableView.insertRows(at: [IndexPath(row: self.items.count-1, section: 1)], with: UITableViewRowAnimation.automatic)
+            self.tableView.insertRows(at: [IndexPath(row: self.items.count-1, section: 0)], with: UITableViewRowAnimation.automatic)
         })
     }
 
@@ -39,28 +43,30 @@ class ItemTableViewController : UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return self.items.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ItemCell", for: indexPath) as! ItemTableCell
+
+        let item = self.items[indexPath.row]
         
-        if indexPath.row == 0 {
-            cell.title.text = "Marshmello"
-            cell.subtitle.text = "20% off all Marshmello merchandise"
-            cell.cellImage.image = UIImage(named: "sxsw2018")
-            cell.wrappingView.backgroundColor = Colors.Blue
-        } else if indexPath.row == 1 {
-            cell.title.text = "Westworld"
-            cell.subtitle.text = "Westworld Season 1 Collector's Edition"
-            cell.cellImage.image = UIImage(named: "sxsw2018")
-            cell.wrappingView.backgroundColor = Colors.Orange
-        } else {
-            cell.title.text = "Ready Player One"
-            cell.subtitle.text = "VIP Invitation to Ready Player One Premiere"
-            cell.cellImage.image = UIImage(named: "sxsw2018")
-            cell.wrappingView.backgroundColor = Colors.Pink
-        }
+//        if indexPath.row == 0 {
+        cell.title.text = item.description
+        cell.subtitle.text = "20% off all Marshmello merchandise"
+        cell.cellImage.image = UIImage(named: "sxsw2018")
+        cell.wrappingView.backgroundColor = colors[indexPath.row % 3]
+//        } else if indexPath.row == 1 {
+//            cell.title.text = "Westworld"
+//            cell.subtitle.text = "Westworld Season 1 Collector's Edition"
+//            cell.cellImage.image = UIImage(named: "sxsw2018")
+//            cell.wrappingView.backgroundColor = Colors.Orange
+//        } else {
+//            cell.title.text = "Ready Player One"
+//            cell.subtitle.text = "VIP Invitation to Ready Player One Premiere"
+//            cell.cellImage.image = UIImage(named: "sxsw2018")
+//            cell.wrappingView.backgroundColor = Colors.Pink
+//        }
 
         return cell
     }
