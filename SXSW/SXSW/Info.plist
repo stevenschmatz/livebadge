@@ -4,6 +4,8 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>CFBundleDisplayName</key>
+	<string>LiveBadge</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -22,6 +24,18 @@
 	<true/>
 	<key>NSCameraUsageDescription</key>
 	<string>This application will use the camera for Augmented Reality.</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Apercu Bold Italic.otf</string>
+		<string>Apercu Bold.otf</string>
+		<string>Apercu Italic.otf</string>
+		<string>Apercu Light Italic.otf</string>
+		<string>Apercu Light.otf</string>
+		<string>Apercu Medium Italic.otf</string>
+		<string>Apercu Medium.otf</string>
+		<string>Apercu Mono.otf</string>
+		<string>Apercu Regular.otf</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
@@ -39,20 +53,6 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>UIAppFonts</key>
-	<array>
-		<string>Apercu Bold Italic.otf</string>
-		<string>Apercu Bold.otf</string>
-		<string>Apercu Italic.otf</string>
-		<string>Apercu Light Italic.otf</string>
-		<string>Apercu Light.otf</string>
-		<string>Apercu Medium Italic.otf</string>
-		<string>Apercu Medium.otf</string>
-		<string>Apercu Mono.otf</string>
-		<string>Apercu Regular.otf</string>
-	</array>
-	<key>UIViewControllerBasedStatusBarAppearance</key>
-	<false/>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
@@ -60,5 +60,7 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
 </dict>
 </plist>

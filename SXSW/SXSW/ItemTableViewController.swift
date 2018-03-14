@@ -26,7 +26,7 @@ class ItemTableViewController : UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ItemCell", for: indexPath) as! ItemTableCell
         
         if indexPath.row == 0 {
-            cell.title.text = "Marshmallo"
+            cell.title.text = "Marshmello"
             cell.subtitle.text = "20% off all Marshmello merchandise"
             cell.cellImage.image = UIImage(named: "sxsw2018")
             cell.wrappingView.backgroundColor = Colors.Blue
