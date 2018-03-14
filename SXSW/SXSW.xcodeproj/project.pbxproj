@@ -16,11 +16,12 @@
 		174BB59120586D9E001FB020 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 174BB58F20586D9E001FB020 /* LaunchScreen.storyboard */; };
 		174BB59920586EFD001FB020 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 174BB59820586EFD001FB020 /* .gitignore */; };
 		174BB59B20587015001FB020 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 174BB59A20587015001FB020 /* Podfile */; };
+		176DE5A6205993F200501D9E /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176DE5A4205993F200501D9E /* Item.swift */; };
+		176DE5A7205993F200501D9E /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176DE5A5205993F200501D9E /* IntroViewController.swift */; };
 		17B3C8C4205884B6002F6DFB /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B3C8C3205884B6002F6DFB /* EventViewController.swift */; };
 		17D8B0FF2058A85200951B8E /* ItemTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D8B0FD2058A85100951B8E /* ItemTableCell.swift */; };
 		17D8B1002058A85200951B8E /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D8B0FE2058A85100951B8E /* ItemViewController.swift */; };
 		280C841F2059939200DC0297 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280C841E2059939000DC0297 /* IntroViewController.swift */; };
-		280C84212059939600DC0297 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280C84202059939600DC0297 /* IntroViewController.swift */; };
 		2853EACA2058A2C1006D355D /* OfferViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2853EAC92058A2C1006D355D /* OfferViewController.swift */; };
 		2853EACC2058A2DB006D355D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2853EACB2058A2DB006D355D /* Constants.swift */; };
 		2853EACE2058A415006D355D /* Autolayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2853EACD2058A415006D355D /* Autolayout.swift */; };
@@ -34,7 +35,6 @@
 		28CAB0302058A81B00253A84 /* Apercu Light Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 28CAB0272058A81B00253A84 /* Apercu Light Italic.otf */; };
 		28CAB0312058A81B00253A84 /* Apercu Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 28CAB0282058A81B00253A84 /* Apercu Italic.otf */; };
 		28CAB03320590A2A00253A84 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28CAB03220590A2A00253A84 /* RootViewController.swift */; };
-		28CAB0372059227300253A84 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28CAB0362059227300253A84 /* IntroViewController.swift */; };
 		28CAB03920592AC300253A84 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 28CAB03820592AC200253A84 /* GoogleService-Info.plist */; };
 		735245D3BA4ECCC102FD88C2 /* Pods_SXSW.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70CEEC11E0288725426BCC74 /* Pods_SXSW.framework */; };
 /* End PBXBuildFile section */
@@ -51,11 +51,12 @@
 		174BB59220586D9E001FB020 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		174BB59820586EFD001FB020 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		174BB59A20587015001FB020 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		176DE5A4205993F200501D9E /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		176DE5A5205993F200501D9E /* IntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		17B3C8C3205884B6002F6DFB /* EventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
 		17D8B0FD2058A85100951B8E /* ItemTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemTableCell.swift; sourceTree = "<group>"; };
 		17D8B0FE2058A85100951B8E /* ItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemViewController.swift; sourceTree = "<group>"; };
 		280C841E2059939000DC0297 /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = IntroViewController.swift; path = "/Users/schmatz/projects/sxsw-hackathon/SXSW/SXSW/Fonts/IntroViewController.swift"; sourceTree = "<absolute>"; };
-		280C84202059939600DC0297 /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = IntroViewController.swift; path = "/Users/schmatz/projects/sxsw-hackathon/SXSW/SXSW/IntroViewController.swift"; sourceTree = "<absolute>"; };
 		2853EAC92058A2C1006D355D /* OfferViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferViewController.swift; sourceTree = "<group>"; };
 		2853EACB2058A2DB006D355D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		2853EACD2058A415006D355D /* Autolayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Autolayout.swift; sourceTree = "<group>"; };
@@ -69,7 +70,6 @@
 		28CAB0272058A81B00253A84 /* Apercu Light Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Apercu Light Italic.otf"; sourceTree = "<group>"; };
 		28CAB0282058A81B00253A84 /* Apercu Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Apercu Italic.otf"; sourceTree = "<group>"; };
 		28CAB03220590A2A00253A84 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
-		28CAB0362059227300253A84 /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = IntroViewController.swift; path = "/Users/schmatz/projects/sxsw-hackathon/SXSW/SXSW/Fonts/IntroViewController.swift"; sourceTree = "<absolute>"; };
 		28CAB03820592AC200253A84 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		70CEEC11E0288725426BCC74 /* Pods_SXSW.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SXSW.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6FD3B62BFA5234E79B39BD0 /* Pods-SXSW.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SXSW.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SXSW/Pods-SXSW.debug.xcconfig"; sourceTree = "<group>"; };
@@ -111,9 +111,9 @@
 		174BB58320586D9D001FB020 /* SXSW */ = {
 			isa = PBXGroup;
 			children = (
+				176DE5A5205993F200501D9E /* IntroViewController.swift */,
+				176DE5A4205993F200501D9E /* Item.swift */,
 				28CAB0162058A67100253A84 /* Fonts */,
-				28CAB0362059227300253A84 /* IntroViewController.swift */,
-				280C84202059939600DC0297 /* IntroViewController.swift */,
 				2853EACB2058A2DB006D355D /* Constants.swift */,
 				2853EAC92058A2C1006D355D /* OfferViewController.swift */,
 				2853EACD2058A415006D355D /* Autolayout.swift */,
@@ -331,16 +331,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				28CAB03320590A2A00253A84 /* RootViewController.swift in Sources */,
-				280C84212059939600DC0297 /* IntroViewController.swift in Sources */,
+				176DE5A7205993F200501D9E /* IntroViewController.swift in Sources */,
 				2853EACA2058A2C1006D355D /* OfferViewController.swift in Sources */,
 				174BB58920586D9D001FB020 /* ViewController.swift in Sources */,
 				280C841F2059939200DC0297 /* IntroViewController.swift in Sources */,
+				176DE5A6205993F200501D9E /* Item.swift in Sources */,
 				174BB58520586D9D001FB020 /* AppDelegate.swift in Sources */,
 				172764E920588F9C00A889E0 /* ItemTableViewController.swift in Sources */,
 				17B3C8C4205884B6002F6DFB /* EventViewController.swift in Sources */,
 				17D8B0FF2058A85200951B8E /* ItemTableCell.swift in Sources */,
 				2853EACE2058A415006D355D /* Autolayout.swift in Sources */,
-				28CAB0372059227300253A84 /* IntroViewController.swift in Sources */,
 				2853EACC2058A2DB006D355D /* Constants.swift in Sources */,
 				17D8B1002058A85200951B8E /* ItemViewController.swift in Sources */,
 			);
