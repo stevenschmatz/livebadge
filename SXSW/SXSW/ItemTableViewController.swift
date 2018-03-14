@@ -8,6 +8,8 @@
 
 import UIKit
 
+let colors = ["21D5FE", "F571D1", "F29120"]
+
 class ItemTableViewController : UITableViewController {
 
     @IBAction func done(_ sender: Any) {
@@ -19,7 +21,7 @@ class ItemTableViewController : UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 5
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -28,6 +30,7 @@ class ItemTableViewController : UITableViewController {
         cell.title.text = "Marshmallow"
         cell.subtitle.text = "Live at the Garden"
         cell.cellImage.image = UIImage(named: "sxsw2018")
+        cell.wrappingView.backgroundColor = UIColor(hexString: colors[indexPath.row % 3])
 
         return cell
     }
