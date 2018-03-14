@@ -176,9 +176,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="5ut-tS-RSv">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5gb-EO-7tV">
+                                    <rect key="frame" x="8" y="7" width="46" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" title="Button"/>
+                                    <connections>
+                                        <action selector="done:" destination="R27-ww-LiM" eventType="touchUpInside" id="bb3-IP-a9d"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="112" id="uFb-Z2-ycQ">
-                                <rect key="frame" x="0.0" y="28" width="375" height="112"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ItemCell" rowHeight="112" id="uFb-Z2-ycQ" customClass="ItemTableCell" customModule="SXSW" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="72" width="375" height="112"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uFb-Z2-ycQ" id="paZ-vI-02q">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="111.5"/>
@@ -228,6 +243,12 @@
                                         <constraint firstItem="Hx2-Ah-fmV" firstAttribute="top" secondItem="paZ-vI-02q" secondAttribute="top" constant="12" id="TEy-F7-4qt"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="cellImage" destination="OI0-6T-zMn" id="lzJ-U3-bLX"/>
+                                    <outlet property="subtitle" destination="tht-4x-ZwK" id="Zs5-1C-hj3"/>
+                                    <outlet property="title" destination="Yyu-qh-qFT" id="QA1-2J-S3x"/>
+                                    <outlet property="wrappingView" destination="Hx2-Ah-fmV" id="cva-KI-b2V"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
