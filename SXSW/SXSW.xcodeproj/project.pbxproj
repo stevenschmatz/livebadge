@@ -17,6 +17,8 @@
 		174BB59920586EFD001FB020 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 174BB59820586EFD001FB020 /* .gitignore */; };
 		174BB59B20587015001FB020 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 174BB59A20587015001FB020 /* Podfile */; };
 		17B3C8C4205884B6002F6DFB /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B3C8C3205884B6002F6DFB /* EventViewController.swift */; };
+		17D8B0FF2058A85200951B8E /* ItemTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D8B0FD2058A85100951B8E /* ItemTableCell.swift */; };
+		17D8B1002058A85200951B8E /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D8B0FE2058A85100951B8E /* ItemViewController.swift */; };
 		2853EACA2058A2C1006D355D /* OfferViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2853EAC92058A2C1006D355D /* OfferViewController.swift */; };
 		2853EACC2058A2DB006D355D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2853EACB2058A2DB006D355D /* Constants.swift */; };
 		2853EACE2058A415006D355D /* Autolayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2853EACD2058A415006D355D /* Autolayout.swift */; };
@@ -45,6 +47,8 @@
 		174BB59820586EFD001FB020 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		174BB59A20587015001FB020 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		17B3C8C3205884B6002F6DFB /* EventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
+		17D8B0FD2058A85100951B8E /* ItemTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemTableCell.swift; sourceTree = "<group>"; };
+		17D8B0FE2058A85100951B8E /* ItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemViewController.swift; sourceTree = "<group>"; };
 		2853EAC92058A2C1006D355D /* OfferViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferViewController.swift; sourceTree = "<group>"; };
 		2853EACB2058A2DB006D355D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		2853EACD2058A415006D355D /* Autolayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Autolayout.swift; sourceTree = "<group>"; };
@@ -97,6 +101,8 @@
 		174BB58320586D9D001FB020 /* SXSW */ = {
 			isa = PBXGroup;
 			children = (
+				17D8B0FD2058A85100951B8E /* ItemTableCell.swift */,
+				17D8B0FE2058A85100951B8E /* ItemViewController.swift */,
 				28CAB0162058A67100253A84 /* Fonts */,
 				2853EACB2058A2DB006D355D /* Constants.swift */,
 				2853EAC92058A2C1006D355D /* OfferViewController.swift */,
@@ -294,8 +300,10 @@
 				174BB58520586D9D001FB020 /* AppDelegate.swift in Sources */,
 				172764E920588F9C00A889E0 /* ItemTableViewController.swift in Sources */,
 				17B3C8C4205884B6002F6DFB /* EventViewController.swift in Sources */,
+				17D8B0FF2058A85200951B8E /* ItemTableCell.swift in Sources */,
 				2853EACE2058A415006D355D /* Autolayout.swift in Sources */,
 				2853EACC2058A2DB006D355D /* Constants.swift in Sources */,
+				17D8B1002058A85200951B8E /* ItemViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
