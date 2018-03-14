@@ -160,13 +160,22 @@ class ViewController: UIViewController, ARSCNViewDelegate, SCNNodeRendererDelega
                 shipNode.scale = SCNVector3(0.000075, 0.000075, 0.000075)
                 shipNode.position = SCNVector3(-0.025, 0.05, 0)
                 
-                let action = SCNAction.moveBy(x: 0, y: 0.005, z: 0, duration: 1.0)
+                let action = SCNAction.rotateBy(x: 0.5, y: 0.1, z: 0, duration: 0.25)
                 action.timingMode = .easeInEaseOut
-                let reversedAction = action.reversed()
-                let sequence = SCNAction.sequence([action, reversedAction])
+                let reversed = action.reversed()
+                let sequence = SCNAction.sequence([action, reversed])
                 let forever = SCNAction.repeatForever(sequence)
                 
                 shipNode.runAction(forever)
+                
+                let actionHorizontal = SCNAction.rotateBy(x: 0.0, y: 0.25, z: 0, duration: 0.5)
+                action.timingMode = .easeInEaseOut
+                let reversedHorizontal = actionHorizontal.reversed()
+                let sequenceHorizontal = SCNAction.sequence([actionHorizontal, reversedHorizontal])
+                let foreverHorizontal = SCNAction.repeatForever(sequenceHorizontal)
+                
+                shipNode.runAction(foreverHorizontal)
+                
                 node.addChildNode(shipNode)
                 
                 
@@ -214,6 +223,18 @@ class ViewController: UIViewController, ARSCNViewDelegate, SCNNodeRendererDelega
                 let cylinderNode = SCNNode(geometry: cylinder)
                 cylinderNode.position = SCNVector3(0.025, 0, 0)
                 node.addChildNode(cylinderNode)
+                
+                let text = SCNText(string: "Marshmello", extrusionDepth: 1)
+                text.font = UIFont(name: "Apercu-Regular", size: 100)
+                text.firstMaterial?.diffuse.contents = UIColor.white
+                text.firstMaterial?.specular.contents = UIColor.white
+                text.firstMaterial?.isDoubleSided = true
+                
+                let textNode = SCNNode(geometry: text)
+                textNode.scale = SCNVector3(0.000075, 0.000075, 0.000075)
+                textNode.position = SCNVector3(-0.045,0,0.025)
+                
+                node.addChildNode(textNode)
             }
         }
     }
