@@ -10,8 +10,9 @@ import UIKit
 import SceneKit
 import ARKit
 import PopupDialog
+import OpenGLES
 
-class ViewController: UIViewController, ARSCNViewDelegate {
+class ViewController: UIViewController, ARSCNViewDelegate, SCNNodeRendererDelegate {
 
     @IBOutlet var sceneView: ARSCNView!
     @IBOutlet weak var eventPreviewView: UIView!
@@ -21,9 +22,6 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
         // Set the view's delegate
         sceneView.delegate = self
-        
-        // Show statistics such as fps and timing information
-        sceneView.showsStatistics = true
 
         eventPreviewView.layer.cornerRadius = 5;
         eventPreviewView.layer.masksToBounds = true;
@@ -112,10 +110,12 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             // Create a plane to visualize the initial position of the detected image.
             let plane = SCNPlane(width: referenceImage.physicalSize.width,
                                  height: referenceImage.physicalSize.height)
+            plane.materials[0].diffuse.contents = UIColor(red: 243/256.0, green: 232/256.0, blue: 220/256.0, alpha: 1)
 
             let planeNode = SCNNode(geometry: plane)
             planeNode.name = "plane"
-            planeNode.opacity = 0.1
+            
+            planeNode.opacity = 0.95
             
             /*
              `SCNPlane` is vertically oriented in its local coordinate space, but
@@ -137,9 +137,18 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             let scene = SCNScene(named: "art.scnassets/ship.scn")!
             
             if let shipNode = scene.rootNode.childNode(withName: "ship", recursively: true) {
-                shipNode.position = SCNVector3(0, 0, 0)
-                shipNode.scale = SCNVector3(1.0, 1.0, 1.0)
+                let shipMesh = shipNode.childNode(withName: "shipMesh", recursively: true)!
+                
+                shipNode.scale = SCNVector3(0.5, 0.5, 0.5)
+                shipNode.position = SCNVector3(0, 0.01, 0)
                 node.addChildNode(shipNode)
+                
+                let cylinder = SCNCylinder(radius: 0.017, height: 0.01)
+                cylinder.materials[0].diffuse.contents = UIColor.blue
+                cylinder.materials[0].fillMode = SCNFillMode.lines
+                let cylinderNode = SCNNode(geometry: cylinder)
+                cylinderNode.position = SCNVector3(0, 0, 0)
+                node.addChildNode(cylinderNode)
             }
         }
     }
@@ -158,4 +167,6 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         // Reset tracking and/or remove existing anchors if consistent tracking is required
         
     }
+    
+    // MARK: - SCNNodeRendererDelegate
 }
