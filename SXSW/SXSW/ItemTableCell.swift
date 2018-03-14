@@ -21,6 +21,8 @@ class ItemTableCell : UITableViewCell {
         wrappingView.layer.cornerRadius = 8
         wrappingView.layer.masksToBounds = true
 
+        wrappingView.dropShadow(offsetX: 0, offsetY: 20, color: UIColor(hue: 0, saturation: 0, brightness: 0.43, alpha: 1), opacity: 0.36, radius: 10)
+
         cellImage.layer.cornerRadius = 40;
         cellImage.layer.masksToBounds = true;
     }
