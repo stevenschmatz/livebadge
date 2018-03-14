@@ -38,4 +38,9 @@ class ItemTableViewController : UITableViewController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 145
     }
+
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let viewController = OfferViewController()
+        self.present(viewController, animated: true)
+    }
 }
