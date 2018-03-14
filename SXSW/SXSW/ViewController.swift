@@ -17,6 +17,8 @@ class ViewController: UIViewController, ARSCNViewDelegate, SCNNodeRendererDelega
     @IBOutlet var sceneView: ARSCNView!
     @IBOutlet weak var eventPreviewView: UIView!
     @IBOutlet weak var hintLabel: UILabel!
+    var spaceship: SCNNode? = nil
+    var shipText: SCNNode? = nil
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,9 +31,15 @@ class ViewController: UIViewController, ARSCNViewDelegate, SCNNodeRendererDelega
 
         hintLabel.layer.cornerRadius = 8;
         hintLabel.layer.masksToBounds = true;
+        let tap = UITapGestureRecognizer(target: self, action: #selector(reset))
+        hintLabel.addGestureRecognizer(tap)
 
         // Setup interaction
         initInteraction()
+    }
+    
+    @objc func reset() {
+        print("reset")
     }
 
     func initInteraction() {
@@ -57,6 +65,9 @@ class ViewController: UIViewController, ARSCNViewDelegate, SCNNodeRendererDelega
             self.sceneView.scene.rootNode.enumerateChildNodes { (node, stop) in
                 node.removeFromParentNode()
             }
+            self.stopTimer()
+            self.shipText = nil
+            self.spaceship = nil
         })
     }
     
@@ -159,6 +170,7 @@ class ViewController: UIViewController, ARSCNViewDelegate, SCNNodeRendererDelega
             if let shipNode = marshmelloScene.rootNode.childNode(withName: "Boole_1_Plastic", recursively: true) {
                 shipNode.scale = SCNVector3(0.000075, 0.000075, 0.000075)
                 shipNode.position = SCNVector3(-0.025, 0.05, 0)
+                shipNode.name = "marshmello"
                 
                 let action = SCNAction.rotateBy(x: 0.5, y: 0.1, z: 0, duration: 0.25)
                 action.timingMode = .easeInEaseOut
@@ -236,6 +248,50 @@ class ViewController: UIViewController, ARSCNViewDelegate, SCNNodeRendererDelega
                 
                 node.addChildNode(textNode)
             }
+            
+            let rocketScene = SCNScene(named: "art.scnassets/arkit-rocket.scn")!
+            
+            if let shipNode = rocketScene.rootNode.childNode(withName: "Rocket", recursively: true) {
+                shipNode.scale = SCNVector3(0.075, 0.075, 0.075)
+                shipNode.position = SCNVector3(0, 0.13, 0)
+                shipNode.name = "ship"
+                
+                let rotateAction = SCNAction.rotateBy(x: 1.9, y: 2.4, z: 0, duration: 0)
+                shipNode.runAction(rotateAction)
+                
+                let action = SCNAction.moveBy(x: 0, y: 0.005, z: 0, duration: 1.0)
+                action.timingMode = .easeInEaseOut
+                let reversedAction = action.reversed()
+                let sequence = SCNAction.sequence([action, reversedAction])
+                let forever = SCNAction.repeatForever(sequence)
+                
+                shipNode.runAction(forever)
+                self.spaceship = shipNode
+                node.addChildNode(shipNode)
+                
+                
+                let cylinder = SCNCylinder(radius: 0.017, height: 0.01)
+                cylinder.materials[0].diffuse.contents = Colors.Orange
+                cylinder.materials[0].fillMode = SCNFillMode.lines
+                let cylinderNode = SCNNode(geometry: cylinder)
+                cylinderNode.position = SCNVector3(0.025, 0, 0)
+                node.addChildNode(cylinderNode)
+
+                let text = SCNText(string: "Ready Player One", extrusionDepth: 1)
+                text.font = UIFont(name: "Apercu-Regular", size: 100)
+                text.firstMaterial?.diffuse.contents = UIColor.white
+                text.firstMaterial?.specular.contents = UIColor.white
+                text.firstMaterial?.isDoubleSided = true
+
+                let textNode = SCNNode(geometry: text)
+                textNode.scale = SCNVector3(0.000075, 0.000075, 0.000075)
+                textNode.position = SCNVector3(0,0.1,0)
+                self.shipText = textNode
+                
+                node.addChildNode(textNode)
+            }
+            
+            self.startTimer()
         }
     }
     
@@ -252,6 +308,41 @@ class ViewController: UIViewController, ARSCNViewDelegate, SCNNodeRendererDelega
     func sessionInterruptionEnded(_ session: ARSession) {
         // Reset tracking and/or remove existing anchors if consistent tracking is required
         
+    }
+    
+    weak var timer: Timer?
+    var counter: Float = 0
+    
+    func startTimer() {
+        timer?.invalidate()   // just in case you had existing `Timer`, `invalidate` it before we lose our reference to it
+        timer = Timer.scheduledTimer(withTimeInterval: 0.01, repeats: true) { timer in
+            self.counter += 0.01
+            guard let ship = self.spaceship else { return }
+            guard let text = self.shipText else { return }
+            
+            let radius: Float = 0.05
+            
+            let x = cosf(-self.counter) * radius
+            let z = sinf(-self.counter) * radius
+            
+            ship.position.x = x
+            ship.position.z = z
+            text.position.x = x - 0.03
+            text.position.z = z
+            
+            let rotateAction = SCNAction.rotateTo(x: 2, y: CGFloat(self.counter + 2.25), z: 0, duration: 0.01)
+            ship.runAction(rotateAction)
+        }
+    }
+    
+    func stopTimer() {
+        timer?.invalidate()
+    }
+    
+    // if appropriate, make sure to stop your timer in `deinit`
+    
+    deinit {
+        stopTimer()
     }
     
     // MARK: - SCNNodeRendererDelegate
