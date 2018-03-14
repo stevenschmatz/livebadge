@@ -21,6 +21,7 @@ class OfferViewController: UIViewController {
         
         button.setTitle("    Back", for: .normal)
         button.titleLabel?.font = UIFont(name: "Apercu-Bold", size: 26)
+        button.setTitleColor(.black, for: .normal)
         button.addTarget(self, action: #selector(back), for: .touchUpInside)
         
         self.view.addSubview(button)
@@ -58,7 +59,7 @@ class OfferViewController: UIViewController {
         
         label.text = "Common item"
         label.textColor = UIColor.white
-        label.font = UIFont(name: "Apercu-Regular", size: 22)
+        label.font = UIFont(name: "Apercu-Boldi", size: 22)
         
         self.view.addSubview(label)
         return label

@@ -78,8 +78,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lyi-Fk-kyp">
-                                <rect key="frame" x="0.0" y="10" width="375" height="667"/>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lyi-Fk-kyp">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </arscnView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="92R-OX-eoD">
                                 <rect key="frame" x="65.5" y="56" width="244" height="52"/>
@@ -143,7 +143,6 @@
                             <constraint firstItem="92R-OX-eoD" firstAttribute="centerX" secondItem="1He-HF-4xw" secondAttribute="centerX" id="HRs-WF-t2c"/>
                             <constraint firstItem="Lyi-Fk-kyp" firstAttribute="centerX" secondItem="1He-HF-4xw" secondAttribute="centerX" id="PRl-A1-CCe"/>
                             <constraint firstItem="Lyi-Fk-kyp" firstAttribute="height" secondItem="DGq-dV-Tgm" secondAttribute="height" id="WTz-pl-hJo"/>
-                            <constraint firstItem="Lyi-Fk-kyp" firstAttribute="centerY" secondItem="1He-HF-4xw" secondAttribute="centerY" id="Z9c-LF-Ph9"/>
                             <constraint firstItem="1He-HF-4xw" firstAttribute="trailing" secondItem="zzS-sh-UVn" secondAttribute="trailing" constant="25" id="dH8-Ph-7VL"/>
                             <constraint firstItem="Lyi-Fk-kyp" firstAttribute="width" secondItem="DGq-dV-Tgm" secondAttribute="width" id="g2M-px-hRF"/>
                             <constraint firstItem="1He-HF-4xw" firstAttribute="top" secondItem="92R-OX-eoD" secondAttribute="bottom" constant="-88" id="pQQ-4g-nle"/>
