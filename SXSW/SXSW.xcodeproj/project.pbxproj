@@ -21,7 +21,6 @@
 		17B3C8C4205884B6002F6DFB /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B3C8C3205884B6002F6DFB /* EventViewController.swift */; };
 		17D8B0FF2058A85200951B8E /* ItemTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D8B0FD2058A85100951B8E /* ItemTableCell.swift */; };
 		17D8B1002058A85200951B8E /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D8B0FE2058A85100951B8E /* ItemViewController.swift */; };
-		280C841F2059939200DC0297 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280C841E2059939000DC0297 /* IntroViewController.swift */; };
 		2853EACA2058A2C1006D355D /* OfferViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2853EAC92058A2C1006D355D /* OfferViewController.swift */; };
 		2853EACC2058A2DB006D355D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2853EACB2058A2DB006D355D /* Constants.swift */; };
 		2853EACE2058A415006D355D /* Autolayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2853EACD2058A415006D355D /* Autolayout.swift */; };
@@ -56,7 +55,6 @@
 		17B3C8C3205884B6002F6DFB /* EventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
 		17D8B0FD2058A85100951B8E /* ItemTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemTableCell.swift; sourceTree = "<group>"; };
 		17D8B0FE2058A85100951B8E /* ItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemViewController.swift; sourceTree = "<group>"; };
-		280C841E2059939000DC0297 /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = IntroViewController.swift; path = "/Users/schmatz/projects/sxsw-hackathon/SXSW/SXSW/Fonts/IntroViewController.swift"; sourceTree = "<absolute>"; };
 		2853EAC92058A2C1006D355D /* OfferViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferViewController.swift; sourceTree = "<group>"; };
 		2853EACB2058A2DB006D355D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		2853EACD2058A415006D355D /* Autolayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Autolayout.swift; sourceTree = "<group>"; };
@@ -137,7 +135,6 @@
 		28CAB0162058A67100253A84 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				280C841E2059939000DC0297 /* IntroViewController.swift */,
 				28CAB0232058A81A00253A84 /* Apercu Bold Italic.otf */,
 				28CAB0222058A81A00253A84 /* Apercu Bold.otf */,
 				28CAB0282058A81B00253A84 /* Apercu Italic.otf */,
@@ -334,7 +331,6 @@
 				176DE5A7205993F200501D9E /* IntroViewController.swift in Sources */,
 				2853EACA2058A2C1006D355D /* OfferViewController.swift in Sources */,
 				174BB58920586D9D001FB020 /* ViewController.swift in Sources */,
-				280C841F2059939200DC0297 /* IntroViewController.swift in Sources */,
 				176DE5A6205993F200501D9E /* Item.swift in Sources */,
 				174BB58520586D9D001FB020 /* AppDelegate.swift in Sources */,
 				172764E920588F9C00A889E0 /* ItemTableViewController.swift in Sources */,
