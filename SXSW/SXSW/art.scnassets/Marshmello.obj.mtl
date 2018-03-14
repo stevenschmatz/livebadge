@@ -1,0 +1,21 @@
+# File produced by Open Asset Import Library (http://www.assimp.sf.net)
+# (assimp v3.1.187496374)
+
+newmtl Plastic Matte
+Kd 0.95 0.95 0.95
+Ka 0 0 0
+Ks 0.2 0.2 0.2
+Ke 0 0 0
+d 1
+Ns 40
+illum 2
+
+newmtl Glossy Black
+Kd 0.135922 0.128431 0.120939
+Ka 0 0 0
+Ks 0.03 0.03 0.03
+Ke 0 0 0
+d 1
+Ns 92
+illum 2
+

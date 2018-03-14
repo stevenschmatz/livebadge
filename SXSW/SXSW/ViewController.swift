@@ -124,9 +124,15 @@ class ViewController: UIViewController, ARSCNViewDelegate, SCNNodeRendererDelega
             // Create a plane to visualize the initial position of the detected image.
             let plane = SCNPlane(width: referenceImage.physicalSize.width,
                                  height: referenceImage.physicalSize.height)
-            plane.materials[0].diffuse.contents = UIColor(red: 243/256.0, green: 232/256.0, blue: 220/256.0, alpha: 1)
+            // plane.materials[0].diffuse.contents = UIColor(red: 243/256.0, green: 232/256.0, blue: 220/256.0, alpha: 1)
+            plane.materials[0].diffuse.contents = UIColor.black
 
             let planeNode = SCNNode(geometry: plane)
+            
+            planeNode.scale.x *= 1.25
+            planeNode.scale.y *= 1.25
+            planeNode.scale.z *= 1.25
+            
             planeNode.name = "plane"
             
             planeNode.opacity = 0.95
@@ -148,13 +154,11 @@ class ViewController: UIViewController, ARSCNViewDelegate, SCNNodeRendererDelega
             node.addChildNode(planeNode)
             
             // Create a new scene
-            let scene = SCNScene(named: "art.scnassets/ship.scn")!
+            let marshmelloScene = SCNScene(named: "art.scnassets/Marshmello.scn")!
             
-            if let shipNode = scene.rootNode.childNode(withName: "ship", recursively: true) {
-                let shipMesh = shipNode.childNode(withName: "shipMesh", recursively: true)!
-                
-                shipNode.scale = SCNVector3(0.5, 0.5, 0.5)
-                shipNode.position = SCNVector3(0, 0.01, 0)
+            if let shipNode = marshmelloScene.rootNode.childNode(withName: "Boole_1_Plastic", recursively: true) {
+                shipNode.scale = SCNVector3(0.000075, 0.000075, 0.000075)
+                shipNode.position = SCNVector3(-0.025, 0.05, 0)
                 
                 let action = SCNAction.moveBy(x: 0, y: 0.005, z: 0, duration: 1.0)
                 action.timingMode = .easeInEaseOut
@@ -167,10 +171,48 @@ class ViewController: UIViewController, ARSCNViewDelegate, SCNNodeRendererDelega
                 
                 
                 let cylinder = SCNCylinder(radius: 0.017, height: 0.01)
-                cylinder.materials[0].diffuse.contents = UIColor.blue
+                cylinder.materials[0].diffuse.contents = Colors.Blue
                 cylinder.materials[0].fillMode = SCNFillMode.lines
                 let cylinderNode = SCNNode(geometry: cylinder)
-                cylinderNode.position = SCNVector3(0, 0, 0)
+                cylinderNode.position = SCNVector3(-0.025, 0, 0)
+                node.addChildNode(cylinderNode)
+                
+                let text = SCNText(string: "Westworld", extrusionDepth: 1)
+                text.font = UIFont(name: "Apercu-Regular", size: 100)
+                text.firstMaterial?.diffuse.contents = UIColor.white
+                text.firstMaterial?.specular.contents = UIColor.white
+                text.firstMaterial?.isDoubleSided = true
+
+                let textNode = SCNNode(geometry: text)
+                textNode.scale = SCNVector3(0.000075, 0.000075, 0.000075)
+                textNode.position = SCNVector3(0.006,0,0.025)
+                
+                node.addChildNode(textNode)
+            }
+            
+            // Create a new scene
+            let scene = SCNScene(named: "art.scnassets/hat.scn")!
+            
+            if let shipNode = scene.rootNode.childNode(withName: "g_SheriffHat_Mesh", recursively: true) {
+                shipNode.scale = SCNVector3(0.0125, 0.0125, 0.0125)
+                shipNode.position = SCNVector3(0.025, 0.05, 0)
+                shipNode.name = "hat"
+                
+                let action = SCNAction.moveBy(x: 0, y: 0.005, z: 0, duration: 1.0)
+                action.timingMode = .easeInEaseOut
+                let reversedAction = action.reversed()
+                let sequence = SCNAction.sequence([action, reversedAction])
+                let forever = SCNAction.repeatForever(sequence)
+                
+                shipNode.runAction(forever)
+                node.addChildNode(shipNode)
+                
+                
+                let cylinder = SCNCylinder(radius: 0.017, height: 0.01)
+                cylinder.materials[0].diffuse.contents = Colors.Orange
+                cylinder.materials[0].fillMode = SCNFillMode.lines
+                let cylinderNode = SCNNode(geometry: cylinder)
+                cylinderNode.position = SCNVector3(0.025, 0, 0)
                 node.addChildNode(cylinderNode)
             }
         }

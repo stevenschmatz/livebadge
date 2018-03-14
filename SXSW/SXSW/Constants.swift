@@ -15,6 +15,10 @@ struct Colors {
     static let Orange = UIColor(red: 242/255.0, green: 145/255.0, blue: 32/255.0, alpha: 1)
 }
 
+struct APIKeys {
+    static let Poly = "AIzaSyCxy5XakOqXp2G6CySSmNWI0APYwBF8Vzk"
+}
+
 // https://stackoverflow.com/questions/24263007/how-to-use-hex-colour-values
 extension UIColor {
     convenience init(hexString: String) {

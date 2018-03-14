@@ -37,7 +37,7 @@ class OfferViewController: UIViewController {
     private lazy var titleView: UILabel = {
         let label = UILabel()
         
-        label.text = "Free Action Bronson Hoodie"
+        label.text = "20% Off All Marshmello Merch"
         label.textColor = UIColor.white
         label.font = UIFont(name: "Apercu-Medium", size: 32)
         label.numberOfLines = 0
@@ -59,7 +59,7 @@ class OfferViewController: UIViewController {
         
         label.text = "Common item"
         label.textColor = UIColor.white
-        label.font = UIFont(name: "Apercu-Boldi", size: 22)
+        label.font = UIFont(name: "Apercu-Bold", size: 22)
         
         self.view.addSubview(label)
         return label
