@@ -9,6 +9,6 @@
 import Foundation
 
 struct Item {
+    let title: String
     let description: String
-    let rarity: String
 }

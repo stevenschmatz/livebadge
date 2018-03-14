@@ -28,8 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             window.rootViewController = rootView
         }
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
-        FirebaseApp.configure()
-
+        
         FirebaseApp.configure()
 
         return true

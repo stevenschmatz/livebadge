@@ -10,7 +10,13 @@ import UIKit
 import Firebase
 import FirebaseDatabase
 
-let colors = [Colors.Blue, Colors.Orange, Colors.Pink]
+let colors = [
+    Rarity.Common: Colors.Blue,
+    Rarity.Rare: Colors.Orange,
+    Rarity.Legendary: Colors.Pink
+]
+
+let mapping = [Rarity.Common, Rarity.Rare, Rarity.Legendary]
 
 class ItemTableViewController : UITableViewController {
 
@@ -31,8 +37,9 @@ class ItemTableViewController : UITableViewController {
     func getData() {
         ref.child("users").child("vMTuRtY4OYN3h3cpAArm9fEAj8y1").child("event").child("4").observe(.childAdded, with: { (snapshot) -> Void in
             let value = snapshot.value as? NSDictionary? ?? [:]
+            let title = value?["name"] as? String ?? ""
             let description = value?["description"] as? String ?? ""
-            let item = Item(description: description, rarity: "")
+            let item = Item(title: title, description: description)
             self.items.append(item)
             self.tableView.insertRows(at: [IndexPath(row: self.items.count-1, section: 0)], with: UITableViewRowAnimation.automatic)
         })
@@ -51,11 +58,11 @@ class ItemTableViewController : UITableViewController {
 
         let item = self.items[indexPath.row]
         
-//        if indexPath.row == 0 {
-        cell.title.text = item.description
-        cell.subtitle.text = "20% off all Marshmello merchandise"
+        cell.title.text = item.title
+        cell.subtitle.text = item.description
         cell.cellImage.image = UIImage(named: "sxsw2018")
-        cell.wrappingView.backgroundColor = colors[indexPath.row % 3]
+        let rarity = mapping[indexPath.row % 3]
+        cell.wrappingView.backgroundColor = colors[rarity]
 //        } else if indexPath.row == 1 {
 //            cell.title.text = "Westworld"
 //            cell.subtitle.text = "Westworld Season 1 Collector's Edition"
@@ -76,12 +83,9 @@ class ItemTableViewController : UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.row == 0 {
-            self.present(OfferViewController(rarity: Rarity.Common, offer: "20% off all Marshmello merchandise"), animated: true)
-        } else if indexPath.row == 1 {
-            self.present(OfferViewController(rarity: Rarity.Rare, offer: "Westworld Season 1 Collector's Edition"), animated: true)
-        } else {
-            self.present(OfferViewController(rarity: Rarity.Legendary, offer: "VIP Invitation to Ready Player One Premiere"), animated: true)
-        }
+        let rarity = mapping[indexPath.row % 3]
+        let item = self.items[indexPath.row]
+
+        self.present(OfferViewController(rarity: rarity, offer: item.description), animated: true)
     }
 }
