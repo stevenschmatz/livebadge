@@ -141,7 +141,16 @@ class ViewController: UIViewController, ARSCNViewDelegate, SCNNodeRendererDelega
                 
                 shipNode.scale = SCNVector3(0.5, 0.5, 0.5)
                 shipNode.position = SCNVector3(0, 0.01, 0)
+                
+                let action = SCNAction.moveBy(x: 0, y: 0.005, z: 0, duration: 1.0)
+                action.timingMode = .easeInEaseOut
+                let reversedAction = action.reversed()
+                let sequence = SCNAction.sequence([action, reversedAction])
+                let forever = SCNAction.repeatForever(sequence)
+                
+                shipNode.runAction(forever)
                 node.addChildNode(shipNode)
+                
                 
                 let cylinder = SCNCylinder(radius: 0.017, height: 0.01)
                 cylinder.materials[0].diffuse.contents = UIColor.blue
