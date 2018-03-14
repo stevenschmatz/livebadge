@@ -9,11 +9,6 @@
 import UIKit
 
 class ItemViewController : UIViewController {
-    @IBAction func done(_ sender: Any) {
-        self.dismiss(animated: true)
-        (UIApplication.shared.keyWindow?.rootViewController as! RootViewController).scrollView.setContentOffset(CGPoint(x:0, y:0), animated: true)
-    }
-
     override func viewDidLoad() {
     }
 }
