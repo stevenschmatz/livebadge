@@ -156,7 +156,7 @@
         <scene sceneID="Mc2-aI-KJ1">
             <objects>
                 <tableViewController id="R27-ww-LiM" customClass="ItemTableViewController" customModule="SXSW" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="dzQ-26-YPD">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="dzQ-26-YPD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -193,7 +193,7 @@
                                 <rect key="frame" x="0.0" y="164" width="375" height="112"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uFb-Z2-ycQ" id="paZ-vI-02q">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="111.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="112"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hx2-Ah-fmV">
@@ -219,7 +219,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="backgroundColor" red="0.12941176470588234" green="0.83529411764705885" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstItem="tht-4x-ZwK" firstAttribute="leading" secondItem="OI0-6T-zMn" secondAttribute="trailing" constant="17" id="6Hc-8l-3gZ"/>
                                                 <constraint firstItem="OI0-6T-zMn" firstAttribute="leading" secondItem="Hx2-Ah-fmV" secondAttribute="leading" constant="12" id="Qim-2M-SsD"/>
