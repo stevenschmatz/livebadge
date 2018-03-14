@@ -101,8 +101,6 @@
 		174BB58320586D9D001FB020 /* SXSW */ = {
 			isa = PBXGroup;
 			children = (
-				17D8B0FD2058A85100951B8E /* ItemTableCell.swift */,
-				17D8B0FE2058A85100951B8E /* ItemViewController.swift */,
 				28CAB0162058A67100253A84 /* Fonts */,
 				2853EACB2058A2DB006D355D /* Constants.swift */,
 				2853EAC92058A2C1006D355D /* OfferViewController.swift */,
@@ -112,7 +110,9 @@
 				174BB58620586D9D001FB020 /* art.scnassets */,
 				174BB58820586D9D001FB020 /* ViewController.swift */,
 				174BB58A20586D9D001FB020 /* Main.storyboard */,
+				17D8B0FD2058A85100951B8E /* ItemTableCell.swift */,
 				172764E820588F9C00A889E0 /* ItemTableViewController.swift */,
+				17D8B0FE2058A85100951B8E /* ItemViewController.swift */,
 				174BB58D20586D9E001FB020 /* Assets.xcassets */,
 				174BB58F20586D9E001FB020 /* LaunchScreen.storyboard */,
 				174BB59220586D9E001FB020 /* Info.plist */,

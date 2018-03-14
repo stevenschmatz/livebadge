@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ItemViewController : UITableViewController {
+class ItemViewController : UIViewController {
     @IBAction func done(_ sender: Any) {
         self.dismiss(animated: true)
     }
