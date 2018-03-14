@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		172764E920588F9C00A889E0 /* ItemTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172764E820588F9C00A889E0 /* ItemTableViewController.swift */; };
+		172C92D1205977D6008FB6CF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 172C92D0205977D6008FB6CF /* GoogleService-Info.plist */; };
 		174BB58520586D9D001FB020 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174BB58420586D9D001FB020 /* AppDelegate.swift */; };
 		174BB58720586D9D001FB020 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 174BB58620586D9D001FB020 /* art.scnassets */; };
 		174BB58920586D9D001FB020 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174BB58820586D9D001FB020 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 		174BB59120586D9E001FB020 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 174BB58F20586D9E001FB020 /* LaunchScreen.storyboard */; };
 		174BB59920586EFD001FB020 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 174BB59820586EFD001FB020 /* .gitignore */; };
 		174BB59B20587015001FB020 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 174BB59A20587015001FB020 /* Podfile */; };
+		1796C60620597C940032D6C6 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1796C60520597C940032D6C6 /* Item.swift */; };
 		17B3C8C4205884B6002F6DFB /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B3C8C3205884B6002F6DFB /* EventViewController.swift */; };
 		17D8B0FF2058A85200951B8E /* ItemTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D8B0FD2058A85100951B8E /* ItemTableCell.swift */; };
 		17D8B1002058A85200951B8E /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D8B0FE2058A85100951B8E /* ItemViewController.swift */; };
@@ -37,6 +39,7 @@
 
 /* Begin PBXFileReference section */
 		172764E820588F9C00A889E0 /* ItemTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewController.swift; sourceTree = "<group>"; };
+		172C92D0205977D6008FB6CF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		174BB58120586D9D001FB020 /* SXSW.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SXSW.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		174BB58420586D9D001FB020 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		174BB58620586D9D001FB020 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -46,7 +49,8 @@
 		174BB59020586D9E001FB020 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		174BB59220586D9E001FB020 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		174BB59820586EFD001FB020 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
-		174BB59A20587015001FB020 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		174BB59A20587015001FB020 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		1796C60520597C940032D6C6 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		17B3C8C3205884B6002F6DFB /* EventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
 		17D8B0FD2058A85100951B8E /* ItemTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemTableCell.swift; sourceTree = "<group>"; };
 		17D8B0FE2058A85100951B8E /* ItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemViewController.swift; sourceTree = "<group>"; };
@@ -114,11 +118,13 @@
 				174BB58A20586D9D001FB020 /* Main.storyboard */,
 				17D8B0FD2058A85100951B8E /* ItemTableCell.swift */,
 				172764E820588F9C00A889E0 /* ItemTableViewController.swift */,
+				1796C60520597C940032D6C6 /* Item.swift */,
 				28CAB03220590A2A00253A84 /* RootViewController.swift */,
 				17D8B0FE2058A85100951B8E /* ItemViewController.swift */,
 				174BB58D20586D9E001FB020 /* Assets.xcassets */,
 				174BB58F20586D9E001FB020 /* LaunchScreen.storyboard */,
 				174BB59220586D9E001FB020 /* Info.plist */,
+				172C92D0205977D6008FB6CF /* GoogleService-Info.plist */,
 			);
 			path = SXSW;
 			sourceTree = "<group>";
@@ -226,6 +232,7 @@
 				174BB59120586D9E001FB020 /* LaunchScreen.storyboard in Resources */,
 				174BB58E20586D9E001FB020 /* Assets.xcassets in Resources */,
 				28CAB02D2058A81B00253A84 /* Apercu Medium.otf in Resources */,
+				172C92D1205977D6008FB6CF /* GoogleService-Info.plist in Resources */,
 				174BB58C20586D9D001FB020 /* Main.storyboard in Resources */,
 				28CAB0302058A81B00253A84 /* Apercu Light Italic.otf in Resources */,
 				28CAB02F2058A81B00253A84 /* Apercu Light.otf in Resources */,
@@ -249,6 +256,7 @@
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/PopupDialog/PopupDialog.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -257,6 +265,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PopupDialog.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -310,6 +319,7 @@
 				174BB58520586D9D001FB020 /* AppDelegate.swift in Sources */,
 				172764E920588F9C00A889E0 /* ItemTableViewController.swift in Sources */,
 				17B3C8C4205884B6002F6DFB /* EventViewController.swift in Sources */,
+				1796C60620597C940032D6C6 /* Item.swift in Sources */,
 				17D8B0FF2058A85200951B8E /* ItemTableCell.swift in Sources */,
 				2853EACE2058A415006D355D /* Autolayout.swift in Sources */,
 				2853EACC2058A2DB006D355D /* Constants.swift in Sources */,
@@ -461,7 +471,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KM659CVM6Q;
 				INFOPLIST_FILE = SXSW/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.stuartolivera.SXSW;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -477,7 +490,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KM659CVM6Q;
 				INFOPLIST_FILE = SXSW/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.stuartolivera.SXSW;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

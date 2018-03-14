@@ -7,11 +7,31 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseDatabase
 
 class ItemTableViewController : UITableViewController {
 
+    var ref: DatabaseReference!
+    var items: [Item] = []
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.ref = Database.database().reference()
+
+        getData()
+    }
+
     @IBAction func done(_ sender: Any) {
         self.dismiss(animated: true)
+    }
+
+    func getData() {
+        ref.child("events/").observe(.childAdded, with: { (snapshot) -> Void in
+            let item = Item(description: snapshot.description, rarity: "")
+            self.items.append(item)
+            self.tableView.insertRows(at: [IndexPath(row: self.items.count-1, section: 1)], with: UITableViewRowAnimation.automatic)
+        })
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
