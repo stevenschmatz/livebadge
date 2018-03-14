@@ -64,10 +64,9 @@ PODS:
 DEPENDENCIES:
   - FBSDKLoginKit
   - Firebase/Auth
-  - Firebase/Database
-  - FirebaseUI/Facebook
   - Firebase/Core
   - Firebase/Database
+  - FirebaseUI/Facebook
   - PopupDialog (~> 0.7)
 
 SPEC CHECKSUMS:
@@ -88,6 +87,6 @@ SPEC CHECKSUMS:
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   PopupDialog: 39598b7d41719f5c025b4b70e62728bae7734fef
 
-PODFILE CHECKSUM: 5ef3e35827084af12fe4cd9b46ce658016fe4795
+PODFILE CHECKSUM: 4508aff198f8170f8c74e66ad84aedea5c414d74
 
 COCOAPODS: 1.4.0
