@@ -33,7 +33,7 @@ class ViewController: UIViewController, ARSCNViewDelegate, SCNNodeRendererDelega
     func initInteraction() {
         let tap = UITapGestureRecognizer(target: self, action: #selector(handleTap(rec:)))
         sceneView.addGestureRecognizer(tap);
-    }i
+    }
 
     @objc func handleTap(rec: UITapGestureRecognizer) {
         if rec.state == .ended {

@@ -39,6 +39,15 @@
 		2853EAC92058A2C1006D355D /* OfferViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OfferViewController.swift; path = "/Users/schmatz/projects/sxsw-hackathon/SXSW/SXSW/OfferViewController.swift"; sourceTree = "<absolute>"; };
 		2853EACB2058A2DB006D355D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		2853EACD2058A415006D355D /* Autolayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Autolayout.swift; sourceTree = "<group>"; };
+		28CAB0172058A75E00253A84 /* Apercu Medium Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Apercu Medium Italic.otf"; path = "../../../../../Downloads/test_app-master 2/public/fonts/Apercu Medium Italic.otf"; sourceTree = "<group>"; };
+		28CAB0182058A75E00253A84 /* Apercu Mono.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Apercu Mono.otf"; path = "../../../../../Downloads/test_app-master 2/public/fonts/Apercu Mono.otf"; sourceTree = "<group>"; };
+		28CAB0192058A75E00253A84 /* Apercu Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Apercu Bold.otf"; path = "../../../../../Downloads/test_app-master 2/public/fonts/Apercu Bold.otf"; sourceTree = "<group>"; };
+		28CAB01A2058A75E00253A84 /* Apercu Bold Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Apercu Bold Italic.otf"; path = "../../../../../Downloads/test_app-master 2/public/fonts/Apercu Bold Italic.otf"; sourceTree = "<group>"; };
+		28CAB01B2058A75E00253A84 /* Apercu Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Apercu Medium.otf"; path = "../../../../../Downloads/test_app-master 2/public/fonts/Apercu Medium.otf"; sourceTree = "<group>"; };
+		28CAB01C2058A75E00253A84 /* Apercu_Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Apercu_Regular.otf; path = "../../../../../Downloads/test_app-master 2/public/fonts/Apercu_Regular.otf"; sourceTree = "<group>"; };
+		28CAB01D2058A75E00253A84 /* Apercu Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Apercu Light.otf"; path = "../../../../../Downloads/test_app-master 2/public/fonts/Apercu Light.otf"; sourceTree = "<group>"; };
+		28CAB01E2058A75E00253A84 /* Apercu Light Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Apercu Light Italic.otf"; path = "../../../../../Downloads/test_app-master 2/public/fonts/Apercu Light Italic.otf"; sourceTree = "<group>"; };
+		28CAB01F2058A75E00253A84 /* Apercu Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Apercu Italic.otf"; path = "../../../../../Downloads/test_app-master 2/public/fonts/Apercu Italic.otf"; sourceTree = "<group>"; };
 		70CEEC11E0288725426BCC74 /* Pods_SXSW.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SXSW.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6FD3B62BFA5234E79B39BD0 /* Pods-SXSW.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SXSW.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SXSW/Pods-SXSW.debug.xcconfig"; sourceTree = "<group>"; };
 		F3F8DD398AD49E1E8B47DE7C /* Pods-SXSW.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SXSW.release.xcconfig"; path = "Pods/Target Support Files/Pods-SXSW/Pods-SXSW.release.xcconfig"; sourceTree = "<group>"; };
@@ -79,6 +88,7 @@
 		174BB58320586D9D001FB020 /* SXSW */ = {
 			isa = PBXGroup;
 			children = (
+				28CAB0162058A67100253A84 /* Fonts */,
 				2853EACB2058A2DB006D355D /* Constants.swift */,
 				2853EAC92058A2C1006D355D /* OfferViewController.swift */,
 				2853EACD2058A415006D355D /* Autolayout.swift */,
@@ -93,6 +103,22 @@
 				174BB59220586D9E001FB020 /* Info.plist */,
 			);
 			path = SXSW;
+			sourceTree = "<group>";
+		};
+		28CAB0162058A67100253A84 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				28CAB01A2058A75E00253A84 /* Apercu Bold Italic.otf */,
+				28CAB0192058A75E00253A84 /* Apercu Bold.otf */,
+				28CAB01F2058A75E00253A84 /* Apercu Italic.otf */,
+				28CAB01E2058A75E00253A84 /* Apercu Light Italic.otf */,
+				28CAB01D2058A75E00253A84 /* Apercu Light.otf */,
+				28CAB0172058A75E00253A84 /* Apercu Medium Italic.otf */,
+				28CAB01B2058A75E00253A84 /* Apercu Medium.otf */,
+				28CAB0182058A75E00253A84 /* Apercu Mono.otf */,
+				28CAB01C2058A75E00253A84 /* Apercu_Regular.otf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		B13F5CE95D975BE87200D2C0 /* Frameworks */ = {
