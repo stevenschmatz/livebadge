@@ -39,6 +39,18 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Apercu Bold Italic.otf</string>
+		<string>Apercu Bold.otf</string>
+		<string>Apercu Italic.otf</string>
+		<string>Apercu Light Italic.otf</string>
+		<string>Apercu Light.otf</string>
+		<string>Apercu Medium Italic.otf</string>
+		<string>Apercu Medium.otf</string>
+		<string>Apercu Mono.otf</string>
+		<string>Apercu Regular.otf</string>
+	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

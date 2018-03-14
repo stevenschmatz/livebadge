@@ -12,6 +12,7 @@ class OfferViewController: UIViewController {
     private lazy var backButton: UIButton = {
         let button = UIButton()
         button.setTitle("Back", for: .normal)
+        button.titleLabel?.font = UIFont(name: "Apercu-Bold", size: 28)
         button.addTarget(self, action: #selector(back), for: .touchUpInside)
         self.view.addSubview(button)
         
@@ -20,10 +21,18 @@ class OfferViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        for family in UIFont.familyNames {
+            print("\(family)")
+            
+            for name in UIFont.fontNames(forFamilyName: family) {
+                print("   \(name)")
+            }
+        }
 
         // Do any additional setup after loading the view.
         self.view.backgroundColor = Colors.Blue
-        backButton.pinToTopEdgeOfSuperview(withOffset: 50)
+        backButton.pinToTopEdgeOfSuperview(withOffset: 80)
+        backButton.pinToLeftEdgeOfSuperview(withOffset: 40)
     }
 
     override func didReceiveMemoryWarning() {
