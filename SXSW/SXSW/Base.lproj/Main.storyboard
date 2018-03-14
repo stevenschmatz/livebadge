@@ -22,7 +22,7 @@
         <scene sceneID="bDq-Eg-ZeF">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mhp-gC-ovm" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="U8d-3V-Nug" customClass="ViewController" customModule="SXSW" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Camera" useStoryboardIdentifierAsRestorationIdentifier="YES" id="U8d-3V-Nug" customClass="ViewController" customModule="SXSW" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DGq-dV-Tgm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -124,7 +124,7 @@
         <!--Item View Controller-->
         <scene sceneID="XCu-gz-Ivd">
             <objects>
-                <viewController id="vyA-F0-YSr" customClass="ItemViewController" customModule="SXSW" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Items" id="vyA-F0-YSr" customClass="ItemViewController" customModule="SXSW" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6Va-Wf-SV3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
