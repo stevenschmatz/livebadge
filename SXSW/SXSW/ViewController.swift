@@ -16,6 +16,7 @@ class ViewController: UIViewController, ARSCNViewDelegate, SCNNodeRendererDelega
 
     @IBOutlet var sceneView: ARSCNView!
     @IBOutlet weak var eventPreviewView: UIView!
+    @IBOutlet weak var hintLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +26,9 @@ class ViewController: UIViewController, ARSCNViewDelegate, SCNNodeRendererDelega
 
         eventPreviewView.layer.cornerRadius = 5;
         eventPreviewView.layer.masksToBounds = true;
+
+        hintLabel.layer.cornerRadius = 8;
+        hintLabel.layer.masksToBounds = true;
 
         // Setup interaction
         initInteraction()
