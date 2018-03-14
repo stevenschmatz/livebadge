@@ -129,14 +129,12 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zzS-sh-UVn">
-                                <rect key="frame" x="290" y="612" width="60" height="30"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="330" y="0.0" width="45" height="667"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="60" id="aZB-fQ-vs8"/>
+                                    <constraint firstAttribute="width" constant="45" id="PmV-wL-pxo"/>
                                 </constraints>
-                                <state key="normal" title="History"/>
                                 <connections>
-                                    <segue destination="vyA-F0-YSr" kind="show" id="aiY-AA-hYu"/>
+                                    <segue destination="vyA-F0-YSr" kind="showDetail" id="aiY-AA-hYu"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap Sprite to redeem" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3aG-lC-qxx">
@@ -153,16 +151,16 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="1He-HF-4xw" firstAttribute="bottom" secondItem="zzS-sh-UVn" secondAttribute="bottom" constant="25" id="3uN-oO-mdi"/>
                             <constraint firstItem="1He-HF-4xw" firstAttribute="bottom" secondItem="3aG-lC-qxx" secondAttribute="bottom" constant="25" id="4yf-MO-wq1"/>
                             <constraint firstAttribute="trailing" secondItem="Lyi-Fk-kyp" secondAttribute="trailing" id="8XC-uS-GGu"/>
                             <constraint firstItem="Lyi-Fk-kyp" firstAttribute="leading" secondItem="DGq-dV-Tgm" secondAttribute="leading" id="Bxk-GI-zGh"/>
+                            <constraint firstAttribute="trailing" secondItem="zzS-sh-UVn" secondAttribute="trailing" id="Djw-m8-xgY"/>
+                            <constraint firstItem="zzS-sh-UVn" firstAttribute="height" secondItem="Lyi-Fk-kyp" secondAttribute="height" id="Fjv-x7-h6Y"/>
+                            <constraint firstItem="zzS-sh-UVn" firstAttribute="top" secondItem="Lyi-Fk-kyp" secondAttribute="top" id="GKh-cH-NK5"/>
                             <constraint firstItem="92R-OX-eoD" firstAttribute="centerX" secondItem="1He-HF-4xw" secondAttribute="centerX" id="HRs-WF-t2c"/>
                             <constraint firstItem="Lyi-Fk-kyp" firstAttribute="top" secondItem="DGq-dV-Tgm" secondAttribute="top" id="Vww-lu-CTh"/>
-                            <constraint firstItem="1He-HF-4xw" firstAttribute="trailing" secondItem="zzS-sh-UVn" secondAttribute="trailing" constant="25" id="dH8-Ph-7VL"/>
                             <constraint firstItem="3aG-lC-qxx" firstAttribute="centerX" secondItem="DGq-dV-Tgm" secondAttribute="centerX" id="med-Ku-QRi"/>
                             <constraint firstItem="1He-HF-4xw" firstAttribute="top" secondItem="92R-OX-eoD" secondAttribute="bottom" constant="-88" id="pQQ-4g-nle"/>
-                            <constraint firstItem="zzS-sh-UVn" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="DGq-dV-Tgm" secondAttribute="leading" constant="20" symbolic="YES" id="wxE-3m-Dt4"/>
                             <constraint firstAttribute="bottom" secondItem="Lyi-Fk-kyp" secondAttribute="bottom" id="yno-Sp-LF2"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="1He-HF-4xw"/>
@@ -305,7 +303,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wTf-og-hNX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1617" y="647"/>
+            <point key="canvasLocation" x="2460" y="-4"/>
         </scene>
     </scenes>
     <resources>
