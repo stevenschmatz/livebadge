@@ -66,6 +66,8 @@ DEPENDENCIES:
   - Firebase/Auth
   - Firebase/Database
   - FirebaseUI/Facebook
+  - Firebase/Core
+  - Firebase/Database
   - PopupDialog (~> 0.7)
 
 SPEC CHECKSUMS:

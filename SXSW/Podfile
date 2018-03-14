@@ -7,6 +7,8 @@ target 'SXSW' do
 
   # Pods for SXSW
   pod 'PopupDialog', '~> 0.7'
+
+  pod 'Firebase/Core'
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
   pod 'FirebaseUI/Facebook'
