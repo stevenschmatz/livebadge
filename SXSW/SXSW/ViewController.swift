@@ -33,7 +33,7 @@ class ViewController: UIViewController, ARSCNViewDelegate, SCNNodeRendererDelega
     func initInteraction() {
         let tap = UITapGestureRecognizer(target: self, action: #selector(handleTap(rec:)))
         sceneView.addGestureRecognizer(tap);
-    }
+    }i
 
     @objc func handleTap(rec: UITapGestureRecognizer) {
         if rec.state == .ended {
@@ -41,11 +41,21 @@ class ViewController: UIViewController, ARSCNViewDelegate, SCNNodeRendererDelega
             let hits = self.sceneView.hitTest(location)
             if !hits.isEmpty && hits[0].node.name != "plane" {
                 // let tappedNode = hits.first?.node
-                showItemDialog()
+                self.presentOffer()
             }
         }
     }
 
+    func presentOffer() {
+        let viewController = OfferViewController()
+        self.present(viewController, animated: true, completion: {
+            self.sceneView.session.pause()
+            self.sceneView.scene.rootNode.enumerateChildNodes { (node, stop) in
+                node.removeFromParentNode()
+            }
+        })
+    }
+    
     func showItemDialog() {
         // Prepare the popup assets
         let title = "THIS IS THE DIALOG TITLE"
