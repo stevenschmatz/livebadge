@@ -8,8 +8,6 @@
 
 import UIKit
 
-let colors = ["21D5FE", "F571D1", "F29120"]
-
 class ItemTableViewController : UITableViewController {
 
     @IBAction func done(_ sender: Any) {
@@ -21,16 +19,28 @@ class ItemTableViewController : UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return 3
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ItemCell", for: indexPath) as! ItemTableCell
-
-        cell.title.text = "Marshmallow"
-        cell.subtitle.text = "Live at the Garden"
-        cell.cellImage.image = UIImage(named: "sxsw2018")
-        cell.wrappingView.backgroundColor = UIColor(hexString: colors[indexPath.row % 3])
+        
+        if indexPath.row == 0 {
+            cell.title.text = "Marshmallo"
+            cell.subtitle.text = "20% off all Marshmello merchandise"
+            cell.cellImage.image = UIImage(named: "sxsw2018")
+            cell.wrappingView.backgroundColor = Colors.Blue
+        } else if indexPath.row == 1 {
+            cell.title.text = "Westworld"
+            cell.subtitle.text = "Westworld Season 1 Collector's Edition"
+            cell.cellImage.image = UIImage(named: "sxsw2018")
+            cell.wrappingView.backgroundColor = Colors.Orange
+        } else {
+            cell.title.text = "Ready Player One"
+            cell.subtitle.text = "VIP Invitation to Ready Player One Premiere"
+            cell.cellImage.image = UIImage(named: "sxsw2018")
+            cell.wrappingView.backgroundColor = Colors.Pink
+        }
 
         return cell
     }
@@ -40,7 +50,12 @@ class ItemTableViewController : UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let viewController = OfferViewController()
-        self.present(viewController, animated: true)
+        if indexPath.row == 0 {
+            self.present(OfferViewController(rarity: Rarity.Common, offer: "20% off all Marshmello merchandise"), animated: true)
+        } else if indexPath.row == 1 {
+            self.present(OfferViewController(rarity: Rarity.Rare, offer: "Westworld Season 1 Collector's Edition"), animated: true)
+        } else {
+            self.present(OfferViewController(rarity: Rarity.Legendary, offer: "VIP Invitation to Ready Player One Premiere"), animated: true)
+        }
     }
 }

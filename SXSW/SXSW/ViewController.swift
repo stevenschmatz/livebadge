@@ -38,6 +38,12 @@ class ViewController: UIViewController, ARSCNViewDelegate, SCNNodeRendererDelega
         initInteraction()
     }
     
+    @IBAction func openLink() {
+        if let link = URL(string: "https://www.sxsw.com/") {
+            UIApplication.shared.open(link)
+        }
+    }
+    
     @objc func reset() {
         print("reset")
     }
@@ -52,14 +58,21 @@ class ViewController: UIViewController, ARSCNViewDelegate, SCNNodeRendererDelega
             let location: CGPoint = rec.location(in: sceneView)
             let hits = self.sceneView.hitTest(location)
             if !hits.isEmpty && hits[0].node.name != "plane" {
-                // let tappedNode = hits.first?.node
-                self.presentOffer()
+                let name = hits[0].node.name
+                
+                if name == "marshmello" {
+                    self.presentOffer(rarity: Rarity.Common, offer: "20% off all Marshmello merchandise")
+                } else if name == "hat" {
+                    self.presentOffer(rarity: Rarity.Rare, offer: "Westworld Season 1 Collector's Edition")
+                } else if name == "Body" {
+                    self.presentOffer(rarity: Rarity.Legendary, offer: "VIP Invitation to Ready Player One Premiere")
+                }
             }
         }
     }
 
-    func presentOffer() {
-        let viewController = OfferViewController()
+    func presentOffer(rarity: Rarity, offer: String) {
+        let viewController = OfferViewController(rarity: rarity, offer: offer)
         self.present(viewController, animated: true, completion: {
             self.sceneView.session.pause()
             self.sceneView.scene.rootNode.enumerateChildNodes { (node, stop) in
@@ -254,7 +267,6 @@ class ViewController: UIViewController, ARSCNViewDelegate, SCNNodeRendererDelega
             if let shipNode = rocketScene.rootNode.childNode(withName: "Rocket", recursively: true) {
                 shipNode.scale = SCNVector3(0.075, 0.075, 0.075)
                 shipNode.position = SCNVector3(0, 0.13, 0)
-                shipNode.name = "ship"
                 
                 let rotateAction = SCNAction.rotateBy(x: 1.9, y: 2.4, z: 0, duration: 0)
                 shipNode.runAction(rotateAction)
@@ -267,6 +279,7 @@ class ViewController: UIViewController, ARSCNViewDelegate, SCNNodeRendererDelega
                 
                 shipNode.runAction(forever)
                 self.spaceship = shipNode
+                self.spaceship!.name = "ship"
                 node.addChildNode(shipNode)
                 
                 

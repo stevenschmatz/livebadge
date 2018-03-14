@@ -7,7 +7,26 @@
 
 import UIKit
 
+enum Rarity {
+    case Common
+    case Rare
+    case Legendary
+}
+
 class OfferViewController: UIViewController {
+    
+    var rarity: Rarity!
+    var offer: String!
+    
+    init(rarity: Rarity, offer: String) {
+        self.rarity = rarity
+        self.offer = offer
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init(coder: NSCoder) {
+        super.init(nibName: nil, bundle: nil)
+    }
 
     private lazy var backButton: UIButton = {
         let button = UIButton()
@@ -37,7 +56,7 @@ class OfferViewController: UIViewController {
     private lazy var titleView: UILabel = {
         let label = UILabel()
         
-        label.text = "20% Off All Marshmello Merch"
+        label.text = self.offer
         label.textColor = UIColor.white
         label.font = UIFont(name: "Apercu-Medium", size: 32)
         label.numberOfLines = 0
@@ -57,7 +76,14 @@ class OfferViewController: UIViewController {
     private lazy var itemTypeLabel: UILabel = {
         let label = UILabel()
         
-        label.text = "Common item"
+        if self.rarity == .Common {
+            label.text = "Common item"
+        } else if self.rarity == .Rare {
+            label.text = "Rare item"
+        } else {
+            label.text = "Legendary item"
+        }
+        
         label.textColor = UIColor.white
         label.font = UIFont(name: "Apercu-Bold", size: 22)
         
@@ -69,7 +95,13 @@ class OfferViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.view.backgroundColor = Colors.Blue
+        if self.rarity == .Common {
+            self.view.backgroundColor = Colors.Blue
+        } else if self.rarity == .Rare {
+            self.view.backgroundColor = Colors.Orange
+        } else {
+            self.view.backgroundColor = Colors.Pink
+        }
         
         backButton.pinToTopEdgeOfSuperview(withOffset: 80)
         backButton.pinToLeftEdgeOfSuperview(withOffset: 40)
